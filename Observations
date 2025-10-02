@@ -1,0 +1,78 @@
+
+
+Key Observations
+1. Expected Annual Loss (EAL) Patterns
+
+Low EAL assets: A001 (≈78 USD), A005 (≈23 USD), A006 (≈25 USD), A008 (≈49 USD).
+
+These are assets with very high control effectiveness (0.94–0.97), so even though they have vulnerabilities, the residual loss is nearly negligible.
+
+High EAL assets:
+
+A007 (≈1,928 USD in Monte Carlo / ≈118k USD in risk_results).
+
+A010 (≈1,962 USD in Monte Carlo / ≈119k USD in risk_results).
+
+These are high-value assets (370k–455k business value) with lower control effectiveness (0.65–0.7), making them major risk contributors.
+
+2. Residual Likelihood vs. Inherent Likelihood
+
+Controls consistently reduce likelihood:
+
+Example: A001 drops from 0.75 → 0.206.
+
+A004 drops from 0.9 → 0.18.
+
+However, some assets like A007 (0.91 → 0.318) and A010 (0.87 → 0.261) still retain very high residual risk, showing that controls applied (C003, C004) are not strong enough.
+
+3. Risk Concentration
+
+A small set of assets (A007, A010) drive a disproportionately large share of EAL.
+
+Even though A001–A006 look similar in vulnerability count (n=1), their risk exposure differs widely because of business value × control effectiveness × likelihood.
+
+This is consistent with Pareto principle in cyber risk (20% of assets drive 80% of the risk).
+
+4. Control Effectiveness Insights
+
+Controls C001, C002, C005 show strong reduction in residual likelihood (e.g., A001, A002, A006).
+
+Control C003 (used in A007, A008, A009) is less effective — residual risk remains relatively high.
+
+Suggestion: Reinforce or replace C003 with stronger mitigations (patching, segmentation, MFA).
+
+5. Loss Distribution Skew (from summaries)
+
+Many assets (A001–A006, A008, A009) show p10 = p50 = 0 in the Monte Carlo view → risk events are rare but can cause spikes (long-tailed distribution).
+
+A004, A007, A010 show nonzero p90 values, confirming heavy-tail risk exposure (catastrophic but infrequent events).
+
+Conclusions
+
+Residual Risk Hotspots:
+
+A007 and A010 are the highest residual risk assets — they need prioritized remediation.
+
+Controls applied here are weak, despite high business value.
+
+Risk Reduction Success Stories:
+
+Assets like A001, A005, A006 show how strong controls (≈0.94+) almost neutralize risk.
+
+Portfolio View:
+
+Risk is not evenly distributed; a handful of assets dominate Expected Annual Loss.
+
+Focusing security budget on top 2–3 risky assets yields maximum ROI.
+
+Control Effectiveness Lessons:
+
+C001, C002, C005 are effective → keep/enhance.
+
+C003 is underperforming → requires reinforcement.
+
+Loss Profile:
+
+The risk distribution is long-tailed.
+
+Boards should be told that while median loss looks small, tail risk (p90 events) could still reach tens of thousands USD.
