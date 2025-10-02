@@ -1,0 +1,6 @@
+control_id,control_name,asset_scope,control_type,effectiveness_score,last_tested
+C001,Firewall,"['A001','A002','A003']",preventive,0.75,2025-08-15
+C002,MFA,"['A004','A005','A006']",preventive,0.8,2025-09-01
+C003,PatchMgmt,"['A007','A008','A009']",corrective,0.65,2025-07-30
+C004,WAF,"['A001','A005','A010']",detective,0.7,2025-08-22
+C005,EDR,"['A002','A006','A009']",preventive,0.85,2025-09-05
